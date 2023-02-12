@@ -1,8 +1,6 @@
 <%@ page import="com.example.customerstable.Customer" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%--
   Created by IntelliJ IDEA.
   User: Volodymyr
@@ -19,18 +17,26 @@
     <thead>
     <tr>
         <th>Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Education Degree</th>
+        <th>Martial Status</th>
+        <th>Email</th>
         <th>Address</th>
+        <th>Phone Number</th>
+        <th>Post Number</th>
+        <th>ID</th>
+        <th>Amount Of Children</th>
+        <th>ID Card Number</th>
+        <th>Health Insurance Number</th>
+        <th>Registration Date</th>
     </tr>
     </thead>
+    <%
+        Object s = request.getAttribute("customers");
+        out.print(s);
+    %>
 </table>
-<%--<%--%>
-<%--    List<Customer> customers = (List<Customer>) request.getAttribute("customerList");--%>
-<%--    PrintWriter pw =response.getWriter();--%>
-<%--    for (Customer customer:customers--%>
-<%--         ) {--%>
-<%--        pw.print(customer.getAddress());--%>
-<%--    }--%>
 
-<%--%>--%>
 </body>
 </html>

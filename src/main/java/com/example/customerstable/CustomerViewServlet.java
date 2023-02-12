@@ -23,7 +23,7 @@ public class CustomerViewServlet extends HttpServlet {
             martialStatus(MaritalStatus.MARRIED).email("cl.gmail.com").address("Casterly Rock").phoneNumber("+3808555622").postNumber(18222).id(3).
             amountOfChildren(3).idCardNumber(12221222).healthInsuranceNumber(122122)
             .dateOfRegistration("2022-03-12").build();
-    List<Customer> customers = Arrays.asList(customer1, customer2, customer2);
+    List<Customer> customers = Arrays.asList(customer1, customer2, customer3);
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,10 +37,21 @@ public class CustomerViewServlet extends HttpServlet {
         StringBuilder sb = new StringBuilder();
         for (Customer customer : customers
         ) {
-            sb.append("<tr>").append("<td>" + customer.getName() + "<td>")
-                    .append("<td>" + customer.getLastName() + "<td>")
-                    .append("<td>" + customer.getGender() + "<td>")
-                    .append("<tr>");
+            sb.append("<tr>").append("<td>" + customer.getName() + "</td>")
+                    .append("<td>" + customer.getLastName() + "</td>")
+                    .append("<td>" + customer.getGender() + "</td>")
+                    .append("<td>" + customer.getEducationDegree() + "</td>")
+                    .append("<td>" + customer.getMaritalStatus() + "</td>")
+                    .append("<td>" + customer.getEmail() + "</td>")
+                    .append("<td>" + customer.getAddress() + "</td>")
+                    .append("<td>" + customer.getPhoneNumber() + "</td>")
+                    .append("<td>" + customer.getPostNumber() + "</td>")
+                    .append("<td>" + customer.getId() + "</td>")
+                    .append("<td>" + customer.getAmountOfChildren() + "</td>")
+                    .append("<td>" + customer.getIdCardNumber() + "</td>")
+                    .append("<td>" + customer.getHealthInsuranceNumber() + "</td>")
+                    .append("<td>" + customer.getDateOfRegistration() + "</td>")
+                    .append("</tr>");
         }
         return sb.toString();
     }
