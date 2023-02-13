@@ -1,5 +1,18 @@
+table{
+    border-collapse: collapse;
+    margin: 0px auto;
+    font-family: Calibri sans-serif;
+    font-size: 18px;
+}
+th{
+    background-color: azure;
+}
 table th,
 table td {
     padding: 10px;
     border: 1px solid #2a2a2a;
+    text-align: center;
+}
+td{
+    box-shadow: inset 0 0px 2px 2px rgba(240, 255, 255, 0.1)
 }
