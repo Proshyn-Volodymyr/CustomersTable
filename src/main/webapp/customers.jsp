@@ -27,6 +27,7 @@
         <th>Phone Number</th>
         <th>Post Number</th>
         <th>ID</th>
+        <th>Age</th>
         <th>Amount Of Children</th>
         <th>ID Card Number</th>
         <th>Health Insurance Number</th>
